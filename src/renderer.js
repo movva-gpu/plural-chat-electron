@@ -53,7 +53,7 @@ Vue.component('message-window', {
   props: ['activealter', 'system'],
   data: function(){
     return {
-      channel: 'direct', // active message serv er
+      channel: 'Direct', // active message serv er
     }
   },
   computed: {
@@ -95,7 +95,7 @@ Vue.component('message-window', {
 
       <button class="windowcontrolbutton"
         v-on:click="$emit('switchwindow', 'preferences')">
-        Preferences
+        Préférences
       </button>
 
       <h1>{{ activealterdisplay }}</h1>
@@ -307,7 +307,7 @@ Vue.component('preferences-window', {
     <div id="preferenceswindow">
       <button class="windowcontrolbutton"
         v-on:click="$emit('switchwindow', 'messaging')">
-        Messaging
+        Chat
       </button>
 
       <add-alter-form
@@ -427,18 +427,18 @@ Vue.component('add-alter-form', {
   },
   template: `
     <div class="addalterform">
-      <p>Add new user:</p>
-      <span>Name: (must be unique)</span>
+      <p>Ajouter un nouvel utilisateur :</p>
+      <span>Nom : (doit être unique)</span>
       <input
         v-model="name"/>
       <br/>
 
-      <span>Shortname: (how name will be displayed)</span>
+      <span>Nom affiché : (comment le nom sera affiché)</span>
       <input
         v-model="shortname"/>
       <br/>
 
-      <span>Shares: (user will be able to see all messages to these users)</span>
+      <span>Shares : (l'utilisateur pourra voir tous les messages destinés à ces utilisateurs)</span>
       <ul>
         <alter-selection
           v-for="s in shares"
@@ -447,7 +447,7 @@ Vue.component('add-alter-form', {
         </alter-selection>
       </ul>
 
-      <button v-on:click="addUser">Add User</button>
+      <button v-on:click="addUser>Ajouter l'utilisateur</button>
       <p>{{ reply }}</p>
     </div>
   `
@@ -497,7 +497,7 @@ Vue.component('clear-data-form', {
   },
   template: `
     <div id="cleardataform">
-      <label for="cleardatatype">Clear {{ prompt }}:</label>
+      <label for="cleardatatype">Supprimer "{{ prompt }}" :</label>
       <select
         name="cleardatatype"
         v-model="cleardatafield">
@@ -509,7 +509,7 @@ Vue.component('clear-data-form', {
         </option>
       </select>
       <button v-on:click="clearDataRequest()">
-        Clear data
+        Supprimer les données
       </button>
       <span>{{ response }}</span>
     </div>
@@ -541,11 +541,11 @@ Vue.component('add-server-form', {
   },
   template: `
     <div class="addserverform">
-      <p>Add new server:</p>
-      <span>Server name:</span>
+      <p>Ajouter un nouveau chat :</p>
+      <span>Nom du chat:</span>
       <input v-model="name"></input>
 
-      <button v-on:click="addServer">Add Server</button>
+      <button v-on:click="addServer">Ajouter le chat</button>
       <p>{{reply}}</p>
     </div>
   `
@@ -585,7 +585,7 @@ Vue.component('delete-server-form', {
   },
   template: `
     <div class="deleteserverform">
-      <label for="servernameselect">Delete server:</label>
+      <label for="servernameselect">Supprimer un chat :</label>
       <select
         name="servernameselect"
         v-model="servername">
@@ -597,7 +597,7 @@ Vue.component('delete-server-form', {
         </option>
       </select>
       <button v-on:click="deleteServerRequest()">
-        Delete
+        Supprimer
       </button>
       <span>{{ reply }}</span>
     </div>
