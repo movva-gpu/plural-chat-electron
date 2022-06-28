@@ -1,10 +1,10 @@
 # Plural Chat
 
-Messaging app for plural systems / those with DID. Intended for making easier to communicate and organize thoughts and plans between headmates.
+Application node.js pour les systèmes (ceux qui ont le TDI/ATDS). Fait pour rendre plus facile la communication et organiser les pensées entre les alters.
 
-Currently features a simple way to switch between users and send messages between each other. Something we do constantly.
+Présente actuellement un moyen simple de changer d'utilisateur et d'envoyer des messages.
 
-The app is build on electron. Requires node and npm to run locally. Run in debug mode by runnin in the root directory:
+Cette app est faite sur electron. Requiert node.js et npm pour être éxécuter localement. Lancer en mode déboggage en exécutant dans le dossier racine :
 
 ```
 $ npm install
